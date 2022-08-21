@@ -15,7 +15,6 @@ export  const useFetch = (url)=> {
       console.log(err)};
   };
 
-
   useEffect(()=> {
     getTours();
   }, [url]);
