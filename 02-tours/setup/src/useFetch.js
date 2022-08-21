@@ -10,8 +10,11 @@ export  const useFetch = (url)=> {
      const tours = await res.json();
      setTours(tours);
      setLoading(false)
-    }catch(err) {console.log(err)};
+    }catch(err) {
+      console.log("hola")
+      console.log(err)};
   };
+
 
   useEffect(()=> {
     getTours();
