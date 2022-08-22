@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 
 export  const useFetch = (url)=> {
   const [loading, setLoading] = useState(true);
-  const [tours, setTours] = useState([]);
+  const [data, setData] = useState([]);
 
-  const getTours = async() => {
+  const getData = async() => {
     try { 
      const res = await fetch(url);
-     const tours = await res.json();
-     setTours(tours);
+     const data = await res.json();
+     setData(data);
      setLoading(false)
     }catch(err) {
       console.log("hola")
@@ -16,8 +16,8 @@ export  const useFetch = (url)=> {
   };
 
   useEffect(()=> {
-    getTours();
+    getData();
   }, [url]);
 
- return {loading, tours} ;
+ return {loading, data: data} ;
 }
