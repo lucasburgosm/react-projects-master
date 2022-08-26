@@ -16,7 +16,7 @@ export  const useFetch = (url)=> {
 
   useEffect(()=> {
     getData();
-  }, [url], getData);
+  }, [url, getData]);
 
  return {loading: loading, data: data} ;
 }
