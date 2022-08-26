@@ -5,7 +5,8 @@ import {useFetch} from './useFetch'
 
 function App() {
 const url = 'https://course-api.com/react-tours-project';
-let {tours, loading} = useFetch(url);
+const {data, loading} = useFetch(url);
+
 
 
 if(loading) {
@@ -14,7 +15,7 @@ if(loading) {
 
 return (
   <main>
-   <Tours tours={tours}></Tours>
+   <Tours tours={data}></Tours>
   </main>
 )}
 

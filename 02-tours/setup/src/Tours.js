@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Tour from './Tour';
 
 const Tours = ({tours}) => {
-
+console.log(tours)
 let [showTopBtn,setShowTopBtn] = useState(false)  
 
 const restore = ()=>{
@@ -27,13 +27,10 @@ useEffect(() => {
     <div className='title'>
       <h2>Ours Tours</h2>
       <div className='underline'></div>
-      <button className='btn' onClick={restore}>Restore</button>
+      <button className='btn' onClick={()=>restore()}>Restore</button>
     </div>
-    <div style={{position:"relative"}}>
-     
       {tours.map((tour)=> {
       return <Tour {...tour} key= {tour.id} /> })}
-    </div>  
   </section>
 )};
 

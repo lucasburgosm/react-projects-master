@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Tour = (props) => {
 let [showMore, setShowMore] = useState(false)
-let [displayTrue,setDisplayTrue] = useState()  
+let [displayTrue,setDisplayTrue] = useState("")  
 
 
 
