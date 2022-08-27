@@ -111,14 +111,14 @@ flex-direction: column;
         flex-direction: column;
         width: 90vw;
         gap: 0%;
-        font-size: small;
+        font-size: larger;
     }
     .mainQuestion{
         margin: 5%;
 
     }
     .btnQ {
-        font-size: smaller;
+        font-size: small;
     }
     .questionary {
         margin: 2%;
